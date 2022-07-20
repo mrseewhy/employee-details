@@ -14,7 +14,8 @@ class CreateNicknamesTable extends Migration
     public function up()
     {
         Schema::create('nicknames', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('nickname');
             $table->timestamps();
         });
     }
