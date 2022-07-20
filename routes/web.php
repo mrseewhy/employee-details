@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\EmployeesController;
+use App\Http\Controllers\NicknamesController;
+use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +21,8 @@ Route::get('/', function () {
 });
 
 Route::resource('/employee', EmployeesController::class);
+Route::resource('/nickname', NicknamesController::class);
+Route::resource('/project', ProjectsController::class);
 
 Auth::routes();
 
