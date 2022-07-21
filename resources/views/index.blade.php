@@ -23,6 +23,9 @@
                         <div class="my-4">
                        <a href="{{route('employee.show', ['employee' => $employee->id])}}"> <h4>{{$employee->name}}</h4> </a>
                         <small>{{$employee->designation}}</small>
+                        <small>My nickname is: {{$employee->nickname->nickname}}</small>
+                        <h6>Project: {{$employee->project->pname}}</h6>
+                        <small>{{$employee->project->pdescription}}</small>
                         </div>
                         @endforeach
                         @endif

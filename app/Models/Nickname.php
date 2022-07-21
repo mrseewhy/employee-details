@@ -11,6 +11,6 @@ class Nickname extends Model
 {
     use HasFactory;
     public function employee() {
-        return $this->Employee::class;
+        return $this->belongsTo('App\Employee');
     }
 }

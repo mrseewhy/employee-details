@@ -14,7 +14,11 @@ class CreateProjectsTable extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('pname');
+            $table->string('pdescription');
+            $table->integer('employees_id')->unsigned();
+            $table->foreign('employees_id')->references('id')->on('employees')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -19,6 +19,9 @@
                         <div class="my-5">
                         <h4>{{$employee->name}}</h4>
                         <small>{{$employee->designation}}</small>
+                        <small>My nickname is: {{$employee->nickname->nickname}}</small>
+                        <h6>Project: {{$employee->project->pname}}</h6>
+                        <small>{{$employee->project->pdescription}}</small>
                         </div>
                     </main>
                 </div>
