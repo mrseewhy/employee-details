@@ -9,6 +9,6 @@ class Project extends Model
 {
     use HasFactory;
     public function employee() {
-        return $this->belongsTo('App\Employee');
+        return $this->belongsTo(Employee::class);
     }
 }

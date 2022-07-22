@@ -16,8 +16,8 @@ class CreateNicknamesTable extends Migration
         Schema::create('nicknames', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nickname');
-            $table->integer('employees_id')->unsigned()->unique();
-            $table->foreign('employees_id')->references('id')->on('employees')->onDelete('cascade');
+            $table->Unsignedinteger('employee_id')->unique();
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
             $table->timestamps();
         });
     }

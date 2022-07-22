@@ -15,8 +15,9 @@ class Employee extends Model
     {
         return $this->hasOne(Nickname::class);
     }
+   
     public function project ()
     {
-        return $this->hasOne('App\Project');
+        return $this->hasMany(Project::class);
     }
 }

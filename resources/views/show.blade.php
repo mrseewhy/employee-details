@@ -18,10 +18,13 @@
                     <main class="container">
                         <div class="my-5">
                         <h4>{{$employee->name}}</h4>
-                        <small>{{$employee->designation}}</small>
+                        <small>{{$employee->designation}}</small> <br>
                         <small>My nickname is: {{$employee->nickname->nickname}}</small>
-                        <h6>Project: {{$employee->project->pname}}</h6>
-                        <small>{{$employee->project->pdescription}}</small>
+                        <h6>Project: @foreach($employee->project as $project) 
+                            <li>{{$project->pname}} - {{$project->pdescription}} </li>
+                        
+                        @endforeach</h6>
+                        
                         </div>
                     </main>
                 </div>
